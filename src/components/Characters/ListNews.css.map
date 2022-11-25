@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;CAMlB;;AARD,AAGI,CAHH,CAGG,OAAO,CAAA;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "ListNews.scss"
+    ],
+    "names": [],
+    "file": "ListNews.css"
+}

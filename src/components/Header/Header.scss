@@ -1,0 +1,32 @@
+$color-blue: rgb(95, 168, 168);
+@import "../../color.scss";
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+nav {
+  background: no-repeat center/100% url("../../assets//fondo\ nav.jpg");
+  color: $black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff,
+    0 0 30px #ffffff, 0 0 40px #fcfffc, 0 0 55px #ffffff, 0 0 75px #ffffff,
+    11px 9px 13px #ffffff;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  a {
+    all: unset;
+  }
+  div {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  p {
+    all: unset;
+    justify-content: right;
+  }
+}
