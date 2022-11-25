@@ -1,10 +1,13 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import axios from "axios";
+import characters from "./AppReducer";
 
 const initialState = {
   characters: [],
+  
 };
+
 
 export const GlobalContext = createContext(initialState);
 
@@ -27,13 +30,18 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         characters: state.characters,
+        
         getCharacters,
+        
       }}
+      
     >
       {children}
     </GlobalContext.Provider>
   );
+  
 };
+
 // import React, { createContext, useReducer } from 'react';
 // import AppReducer from "./AppReducer"
 // import axios from "axios"

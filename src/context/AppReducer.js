@@ -4,6 +4,7 @@ const characters = (state, action) => {
         return {
           ...state,
           characters: action.payload,
+          
         };
       default:
         return state;

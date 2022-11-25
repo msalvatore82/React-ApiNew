@@ -31,7 +31,7 @@ const NewNotice = () => {
   };
 
   useEffect(() => {
-    if (data.titulo === " ") {
+    if (data.titulo === "") {
       setMessage("el nombre debe ser con un formato correcto");
       setBtnDisabled(true);
     } else if (data.contenido.length < 100) {
@@ -51,22 +51,8 @@ const NewNotice = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("hola");
     e.preventDefault();
-    console.log(
-      "enviando datos..." +
-        data.titulo +
-        " " +
-        data.epigrafe +
-        " " +
-        data.contenido +
-        " " +
-        data.fecha +
-        " " +
-        data.seccion +
-        " " +
-        data.autor
-    );
-
     localStorage.setItem("Nueva noticia", JSON.stringify(data));
 
     clearState();
@@ -78,67 +64,94 @@ const NewNotice = () => {
 
   return (
     <>
-      <div className="titulo">Por favor cargar su notica</div>
-      <div className="form-noticia">
-      {visible ? (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="titulo"
-            value={data.titulo}
-            placeholder="Titulo"
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="epigrafe"
-            value={data.epigrafe}
-            placeholder="Epigrafe"
-            onChange={handleInputChange}
-          />
-          <input
-            type="tex"
-            name="contenido"
-            value={data.contenido}
-            placeholder="Escriba su noticia aqui"
-            onChange={handleInputChange}
-          />
-          <input
-            type="date"
-            name="fecha"
-            value={data.fecha}
-            placeholder="fecha"
-            onChange={handleInputChange}
-          />
-          {/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
-          <input
-            type="text"
-            name="seccion"
-            value={data.seccion}
-            placeholder="Seccion"
-            onChange={handleInputChange}
-          />
-          <input
-            type="texta"
-            name="autor"
-            value={data.autor}
-            placeholder="Autor"
-            onChange={handleInputChange}
-          />
-          <button className="button" type="submit" disabled={btnDisabled}>
-            imprimir Noticia
-          </button>
-        </form>
-        ):(<span>"Lo estamos redirigiendo al Home..."</span>)}
-      
-    </div>
-      <p className="noticia-mensaje">
+       <div className="form-noticia">
+        {visible ? (
+        <>
         
-      </p>
+          <form onSubmit={handleSubmit}>
+            <div className="nombre">
+              <span>EXTRA EXTRA</span>
+            </div>
+            <div className="eslogan" >Noticias que desinforman</div>
+            <div className="encabezado" >
+            <div className="seccion1">
+            <div className="titulo">
+              <input
+                type="text"
+                name="titulo"
+                value={data.titulo}
+                placeholder="Titulo"
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="epigrafe">
+              <input
+                type="text"
+                name="epigrafe"
+                value={data.epigrafe}
+                placeholder="Epigrafe"
+                onChange={handleInputChange}
+              />
+            </div>
+              <textarea
+                name="contenido"
+                cols="30"
+                rows="10"
+                value={data.contenido}
+                placeholder="Escriba su noticia aqui"
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <div className="seccion2">
+            <div className="foto">
+              <img src="https://img1.freepng.es/20180821/svf/kisspng-telegram-sticker-messaging-apps-monopoly-image-telegram-stickers-5b7c806baedc18.1871840515348859957162.jpg" alt="" />
+            </div>
+            </div>
+            </div>
+            <div className="seccion3" >
+            <div className="seccion">
+              <input
+                type="text"
+                name="seccion"
+                value={data.seccion}
+                placeholder="Seccion"
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="autor">
+              <input
+                type="texta"
+                name="autor"
+                value={data.autor}
+                placeholder="Autor"
+                onChange={handleInputChange}
+              />
+            </div>
+            </div>
+            <div className="fecha seccion4">
+              <input
+                type="date"
+                name="fecha"
+                value={data.fecha}
+                placeholder="fecha"
+                onChange={handleInputChange}
+              />
+            </div>
+            <button className="button" type="submit" disabled={btnDisabled}>
+              imprimir Noticia
+            </button>
+          </form>
+          <p>
+            {message}
+          </p>
+          </>
+        ) : (
+          <span className="mensaje-home"> message: "Lo estamos redirigiendo al Home..."</span>
+        )}
+      </div>
+      <p className="noticia-mensaje"></p>
     </>
   );
 };
 
 export default NewNotice;
-
-
