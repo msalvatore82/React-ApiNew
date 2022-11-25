@@ -4,7 +4,6 @@ import './App.css';
 import ClimaNews from './components/ClimaNews/ClimaNews';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import characters from './components/Characters/ListNews.jsx';
 import NewNotice from './components/NewNotice/NewNotice';
 import { GlobalProvider } from './context/GlobalState';
 

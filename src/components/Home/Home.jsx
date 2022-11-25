@@ -5,13 +5,13 @@ import "./Home.scss"
 
 const Home = () => {
   //me traigo la función de mi context
-  const { getCharacters } = useContext(GlobalContext);
+  const { getlistNews } = useContext(GlobalContext);
   
 
   useEffect(() => {
-    getCharacters();
+    getlistNews();
     
-  }, []);
+  }, [getlistNews]);
 
   return (
     <div>

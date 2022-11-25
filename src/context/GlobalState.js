@@ -1,10 +1,9 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import axios from "axios";
-import characters from "./AppReducer";
 
 const initialState = {
-  characters: [],
+    listNews: [],
   
 };
 
@@ -14,13 +13,13 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  const getCharacters = async () => {
+  const getlistNews = async () => {
     const res = await axios.get("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=4ZhXAfKuFxtPmgS5z0KXh5nCIL3bZFuY");
     
 
     //cambia el estado
     dispatch({
-      type: "GET_CHARACTERS",
+      type: "GET_NEWS",
       payload: res.data.results,
     });
   };
@@ -29,9 +28,9 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        characters: state.characters,
+        listNews: state.listNews,
         
-        getCharacters,
+        getlistNews,
         
       }}
       
