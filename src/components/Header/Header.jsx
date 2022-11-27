@@ -6,12 +6,10 @@ const Header = () => {
   return (
     <>
       <nav>
-        <span>Extra Extra</span>
-        <p>Noticias que desinforman</p>
-        <div>
-            <Link to="/"><span>Home</span></Link>
-            <Link to="/ClimaNews"><span>El Clima</span></Link>
-            <Link to="/NewNotice"><span>Cargar Noticias</span></Link>
+       <div>
+            <Link className='botonHome' to="/"><span>Home</span></Link>
+            <Link className='botonClima' to="/ClimaNews"><span>El Clima</span></Link>
+            <Link className='botonNoticia'  to="/NewNotice"><span>Cargar Noticias</span></Link>
         </div>
       </nav>
     

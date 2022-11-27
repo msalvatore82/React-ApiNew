@@ -34,7 +34,7 @@ const NewNotice = () => {
     if (data.titulo === "") {
       setMessage("el nombre debe ser con un formato correcto");
       setBtnDisabled(true);
-    } else if (data.contenido.length < 100) {
+    } else if (data.contenido.length < 50) {
       setMessage("la noticia debe tener al menos 500 caracteres");
       setBtnDisabled(true);
     } else {
@@ -58,7 +58,7 @@ const NewNotice = () => {
     clearState();
     setTimeout(() => {
       navigate("/");
-    }, 2000);
+    }, 4000);
     setVisible(false);
   };
 
@@ -75,14 +75,14 @@ const NewNotice = () => {
             <div className="eslogan" >Noticias que desinforman</div>
             <div className="encabezado" >
             <div className="seccion1">
-            <div className="titulo">
-              <input
+            <div >
+              <span className="titulo"><input
                 type="text"
                 name="titulo"
                 value={data.titulo}
                 placeholder="Titulo"
                 onChange={handleInputChange}
-              />
+              /></span>
             </div>
             <div className="epigrafe">
               <input
@@ -109,7 +109,6 @@ const NewNotice = () => {
             </div>
             </div>
             <div className="seccion3" >
-            <div className="seccion">
               <input
                 type="text"
                 name="seccion"
@@ -117,7 +116,7 @@ const NewNotice = () => {
                 placeholder="Seccion"
                 onChange={handleInputChange}
               />
-            </div>
+            
             <div className="autor">
               <input
                 type="texta"
@@ -146,7 +145,7 @@ const NewNotice = () => {
           </p>
           </>
         ) : (
-          <span className="mensaje-home"> message: "Lo estamos redirigiendo al Home..."</span>
+          <span className="mensaje-home">"Lo estamos redirigiendo al Home..."</span>
         )}
       </div>
       <p className="noticia-mensaje"></p>

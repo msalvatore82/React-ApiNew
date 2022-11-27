@@ -1,9 +1,17 @@
 import React from 'react'
+import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+
+    <div>
+    <footer>
+    <span className='texto-footer' >Api News con React Matias Salvatore </span>
+    </footer>      
+      </div>
   )
 }
+
+
 
 export default Footer

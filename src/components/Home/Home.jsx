@@ -1,6 +1,6 @@
 import React, { useContext, useEffect} from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import News from "../Characters/ListNews";
+import News from "../ListNews/ListNews";
 import "./Home.scss"
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
       <div >
       <News className="noticias" />
       </div>
-    </div>
+     </div>
   );
 };
 
