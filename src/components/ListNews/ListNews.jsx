@@ -5,14 +5,11 @@ import "./ListNews.scss";
 
 
 const News = () => {
-  const llamarLink = (url) => {
-    window.location.replace(url);
-  };
   const { listNews } = useContext(GlobalContext);
   const listNew = listNews.map((elementNews) => {
     const imgNull = elementNews.media.length !== 0
     return (
-      <div key={elementNews.id}>
+      <div key={elementNews.id} >
         <div className="noticias">
           <p className="titulo">{elementNews.title}</p>
           <p className="contenido">{elementNews.abstract}</p>
@@ -21,15 +18,15 @@ const News = () => {
           <p className="date">
             {elementNews.source}, {elementNews.published_date}
           </p>
-          <button className="Button" onClick={() => llamarLink(elementNews.url)}>
-              Check this new
-            </button>
+          <a href={elementNews.url} target="_blank" rel="noopener noreferrer"> <button className="button" >
+              Abrir noticia
+            </button></a>
         </div>
         </div>
     );
   });
 
-  return <div>{listNew}</div>;
+  return <div className="news-container">{listNew}</div>;
 };
 
 export default News;

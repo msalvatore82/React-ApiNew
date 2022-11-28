@@ -17,9 +17,9 @@ const Home = () => {
     <div>
       <h2>EXTRA EXTRA</h2>
       <h3>NOTICIAS QUE DESINFORMAN</h3>
-      <div >
+    
       <News className="noticias" />
-      </div>
+     
      </div>
   );
 };
