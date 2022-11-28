@@ -16,19 +16,19 @@ In the Frontend project we will combine the React + Sass, in addition to Javascr
 
 2 - Once the project is cloned, you must install the necessary modules with npm:
 
-> npm install
+> $npm install -y
 
-3 - Sass
+3 - Module Sass
 
-> install Sass
+> $npm install Sass
 
-4 - module
+4 - module Axios
 
-> install axios
+> $npm install Axios
 
-5 - module
+5 - Module routerDON
 
-> install routerDON
+> $npm i router-dom
 
 6 - Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -66,7 +66,6 @@ Sections:
   <p align="center">
 <a href = "mailto:salvatoretadey.matias@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
     <a href="https://www.linkedin.com/in/salvatorematias/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-</p>
 
 
 ---
