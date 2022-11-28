@@ -5,7 +5,7 @@ import "./Home.scss"
 
 const Home = () => {
   const { getlistNews, listNews} = useContext(GlobalContext);
-  const [category,setCategory]= useState("books")
+  const [category,setCategory]= useState("world")
 
   useEffect(() => {
     getlistNews(category);
